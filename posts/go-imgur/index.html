@@ -1,0 +1,158 @@
+<!doctype html><html lang=en-us><head><link rel=stylesheet href=https://yenchunli.github.io/sass/main.min.9aabe12cad1f025a0e58de0a6f0b145045f98d7834436d97b0e5085d5a1b9e42.css><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css integrity=sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh crossorigin=anonymous><script src=https://code.jquery.com/jquery-3.4.1.slim.min.js integrity=sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js integrity=sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous></script><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel=stylesheet><meta name=viewport content="width=device-width,initial-scale=1"><title>Jack Li</title><link rel=icon href=/img/favicon.ico type=image/x-icon><script src=https://identity.netlify.com/v1/netlify-identity-widget.js></script><script src=https://unpkg.com/netlify-cms@^2.3.1/dist/netlify-cms.js></script><script src=https://unpkg.com/netlify-auth-providers></script></head><body><div style=padding-top:80px class=container><h1>Write a imgur upload service with go</h1><p>Date: 2021-04-10</p><p>Tags: <button class="btn btn-outline-info mr-2">go</button> <button class="btn btn-outline-info mr-2">imgur</button> <button class="btn btn-outline-info mr-2">gin</button></p><h2>Directory</h2><nav id=TableOfContents><ul><li><a href=#background>Background</a></li><li><a href=#packages-used>Packages Used</a></li><li><a href=#code>Code</a><ul><li><a href=#1-create-a-client-struct-and-constructor-to-storeinitialize-token-and-imgur-api-url>1. Create a Client struct and constructor to store/initialize token and imgur API URL</a></li><li><a href=#2-create-a-uploadimage-function>2. Create a UploadImage function</a></li></ul></li><li><a href=#tests>Tests</a></li><li><a href=#usage>Usage</a></li></ul></nav><h2 id=background>Background</h2><p>Most of the services need a image upload services. Some applications like Ptt, Dcard and HackMD use Imgur to store pictures. Imgur provides free spaces for users to upload their images, and it also provides API so that programers can upload images by sending POST request. In this tutorial, we are going to build a imgur upload service.</p><h2 id=packages-used>Packages Used</h2><ul><li>gonic/gin: http server</li><li>bytes: store images</li><li>encoding/json: process response</li><li>io: transfer io.Reader to []byte</li><li>&ldquo;mime/multipart&rdquo;: form data(request)</li></ul><h2 id=code>Code</h2><h3 id=1-create-a-client-struct-and-constructor-to-storeinitialize-token-and-imgur-api-url>1. Create a Client struct and constructor to store/initialize token and imgur API URL</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>Client</span> <span style=color:#66d9ef>struct</span> {
+	<span style=color:#a6e22e>token</span> <span style=color:#66d9ef>string</span>
+	<span style=color:#a6e22e>uploadApiUrl</span> <span style=color:#66d9ef>string</span>
+}
+
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>NewClient</span>(<span style=color:#a6e22e>token</span> <span style=color:#66d9ef>string</span>, <span style=color:#a6e22e>uploadApiUrl</span> <span style=color:#66d9ef>string</span>) <span style=color:#f92672>*</span><span style=color:#a6e22e>Client</span>{
+	<span style=color:#66d9ef>return</span> <span style=color:#f92672>&amp;</span><span style=color:#a6e22e>Client</span>{<span style=color:#a6e22e>token</span>: <span style=color:#a6e22e>token</span>, <span style=color:#a6e22e>uploadApiUrl</span>: <span style=color:#a6e22e>uploadApiUrl</span>}
+}
+</code></pre></div><h3 id=2-create-a-uploadimage-function>2. Create a UploadImage function</h3><p>We consider to choose type <code>[]byte</code> instead of <code>io.Reader</code> for params.
+The main reason is that we should pass the real data, not the FileReader pointer.
+Also <code>[]byte</code> is easier to write test.</p><h4 id=workflows>Workflows</h4><ol><li>if image is nil, return error</li><li>Create a multipart writer for writing form-data</li><li>CreateFormFile creates fields for form</li><li>Copy data at the end of the writer</li><li>Send a POST request to Imugr with the authorization token</li><li>Decode the response</li><li>Return the imgur image url</li></ol><h4 id=functions>Functions</h4><table><thead><tr><th>Package</th><th>Function</th></tr></thead><tbody><tr><td>mime/multipart</td><td>func (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)</td></tr><tr><td>io</td><td>func Copy(dst Writer, src Reader) (written int64, err error)</td></tr><tr><td>http</td><td>func NewRequest(method, url string, body io.Reader) (*Request, error)</td></tr><tr><td>io/ioutil</td><td>func ReadAll(r io.Reader) ([]byte, error)</td></tr></tbody></table><h4 id=code-1>Code</h4><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#66d9ef>func</span> (<span style=color:#a6e22e>client</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>Client</span>) <span style=color:#a6e22e>UploadImage</span>(<span style=color:#a6e22e>image</span> []<span style=color:#66d9ef>byte</span>) (<span style=color:#66d9ef>string</span>, <span style=color:#66d9ef>error</span>){
+    <span style=color:#66d9ef>if</span> <span style=color:#a6e22e>image</span> <span style=color:#f92672>==</span> <span style=color:#66d9ef>nil</span> {
+		<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;&#34;</span>, <span style=color:#a6e22e>errors</span>.<span style=color:#a6e22e>New</span>(<span style=color:#e6db74>&#34;No Image&#34;</span>)
+	}
+	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>buf</span> = new(<span style=color:#a6e22e>bytes</span>.<span style=color:#a6e22e>Buffer</span>)
+    <span style=color:#a6e22e>writer</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>multipart</span>.<span style=color:#a6e22e>NewWriter</span>(<span style=color:#a6e22e>buf</span>)
+
+    <span style=color:#a6e22e>part</span>, <span style=color:#a6e22e>_</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>writer</span>.<span style=color:#a6e22e>CreateFormFile</span>(<span style=color:#e6db74>&#34;image&#34;</span>, <span style=color:#e6db74>&#34;filename&#34;</span>)
+
+	<span style=color:#a6e22e>imgReader</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>bytes</span>.<span style=color:#a6e22e>NewReader</span>(<span style=color:#a6e22e>image</span>)
+    <span style=color:#a6e22e>io</span>.<span style=color:#a6e22e>Copy</span>(<span style=color:#a6e22e>part</span>, <span style=color:#a6e22e>imgReader</span>)
+
+    <span style=color:#a6e22e>writer</span>.<span style=color:#a6e22e>Close</span>()
+    <span style=color:#a6e22e>req</span>, <span style=color:#a6e22e>_</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>http</span>.<span style=color:#a6e22e>NewRequest</span>(<span style=color:#e6db74>&#34;POST&#34;</span>, <span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>uploadApiUrl</span>, <span style=color:#a6e22e>buf</span>)
+    <span style=color:#a6e22e>req</span>.<span style=color:#a6e22e>Header</span>.<span style=color:#a6e22e>Set</span>(<span style=color:#e6db74>&#34;Content-Type&#34;</span>, <span style=color:#a6e22e>writer</span>.<span style=color:#a6e22e>FormDataContentType</span>())
+    <span style=color:#a6e22e>req</span>.<span style=color:#a6e22e>Header</span>.<span style=color:#a6e22e>Set</span>(<span style=color:#e6db74>&#34;Authorization&#34;</span>, <span style=color:#e6db74>&#34;Bearer &#34;</span><span style=color:#f92672>+</span><span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>token</span>)
+
+    <span style=color:#a6e22e>res</span>, <span style=color:#a6e22e>_</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>http</span>.<span style=color:#a6e22e>DefaultClient</span>.<span style=color:#a6e22e>Do</span>(<span style=color:#a6e22e>req</span>)
+    <span style=color:#66d9ef>defer</span> <span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>Body</span>.<span style=color:#a6e22e>Close</span>()
+    <span style=color:#a6e22e>body</span>, <span style=color:#a6e22e>_</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>ioutil</span>.<span style=color:#a6e22e>ReadAll</span>(<span style=color:#a6e22e>res</span>.<span style=color:#a6e22e>Body</span>)
+
+	<span style=color:#a6e22e>dec</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>json</span>.<span style=color:#a6e22e>NewDecoder</span>(<span style=color:#a6e22e>bytes</span>.<span style=color:#a6e22e>NewReader</span>(<span style=color:#a6e22e>body</span>))
+	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>img</span> <span style=color:#a6e22e>imageInfoDataWrapper</span>
+	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>dec</span>.<span style=color:#a6e22e>Decode</span>(<span style=color:#f92672>&amp;</span><span style=color:#a6e22e>img</span>); <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+		<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;&#34;</span>, <span style=color:#a6e22e>errors</span>.<span style=color:#a6e22e>New</span>(<span style=color:#e6db74>&#34;Fail to decode&#34;</span>)
+	}
+
+	<span style=color:#66d9ef>if</span> !<span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>Success</span> {
+		<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;&#34;</span>, <span style=color:#a6e22e>errors</span>.<span style=color:#a6e22e>New</span>(<span style=color:#e6db74>&#34;Fail&#34;</span>)
+	}
+    
+	<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>Data</span>.<span style=color:#a6e22e>Link</span>, <span style=color:#66d9ef>nil</span>
+}
+</code></pre></div><h2 id=tests>Tests</h2><p>We set token by environment variable.</p><p>There are two tests:</p><ol><li>Test upload nil image</li><li>Test upload real image</li></ol><p><code>io.ReadFile()</code> reads file in []byte as input file.</p><p>Need to check if the return URL is correct (<a href=https://i.imgur.com/xxxxx)>https://i.imgur.com/xxxxx)</a>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#f92672>package</span> <span style=color:#a6e22e>upload</span>
+
+<span style=color:#f92672>import</span> (
+	<span style=color:#e6db74>&#34;testing&#34;</span>
+	<span style=color:#e6db74>&#34;os&#34;</span>
+	<span style=color:#e6db74>&#34;io/ioutil&#34;</span>
+	<span style=color:#e6db74>&#34;regexp&#34;</span>
+)
+
+<span style=color:#75715e>// Test if upload a nil image, it should return error
+</span><span style=color:#75715e></span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>TestUploadNilImage</span>(<span style=color:#a6e22e>t</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>testing</span>.<span style=color:#a6e22e>T</span>) {
+
+	<span style=color:#a6e22e>client</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>NewClient</span>(<span style=color:#e6db74>&#34;&#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>)
+
+	<span style=color:#a6e22e>_</span>, <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>UploadImage</span>(<span style=color:#66d9ef>nil</span>)
+
+	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>==</span> <span style=color:#66d9ef>nil</span> {
+		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Error</span>(<span style=color:#e6db74>&#34;UploadImage() should have an error&#34;</span>)
+		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fail</span>()
+	}
+}
+
+<span style=color:#75715e>// Test if upload real image, it should return success(200)
+</span><span style=color:#75715e></span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>TestUploadRealImage</span>(<span style=color:#a6e22e>t</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>testing</span>.<span style=color:#a6e22e>T</span>) {
+	<span style=color:#a6e22e>token</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>os</span>.<span style=color:#a6e22e>Getenv</span>(<span style=color:#e6db74>&#34;IMGUR_UPLOAD_TOKEN&#34;</span>)
+	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>token</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;&#34;</span> {
+		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Skip</span>(<span style=color:#e6db74>&#34;IMGUR_UPLOAD_TOKEN is not set.&#34;</span>)
+	}
+
+	<span style=color:#a6e22e>client</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>NewClient</span>(<span style=color:#a6e22e>os</span>.<span style=color:#a6e22e>Getenv</span>(<span style=color:#e6db74>&#34;IMGUR_UPLOAD_TOKEN&#34;</span>), <span style=color:#e6db74>&#34;https://api.imgur.com/3/upload&#34;</span>)
+
+	<span style=color:#75715e>// Read File to byte
+</span><span style=color:#75715e></span>	<span style=color:#a6e22e>file</span>, <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>ioutil</span>.<span style=color:#a6e22e>ReadFile</span>(<span style=color:#e6db74>&#34;logo.png&#34;</span>)
+	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Skip</span>(<span style=color:#e6db74>&#34;Can&#39;t read logo.png for test&#34;</span>)
+	}
+
+	<span style=color:#a6e22e>url</span>, <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>UploadImage</span>(<span style=color:#a6e22e>file</span>)
+	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Errorf</span>(<span style=color:#e6db74>&#34;UploadImage() failed with error: %v&#34;</span>, <span style=color:#a6e22e>err</span>)
+		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fail</span>()
+	}
+	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>matched</span>, <span style=color:#a6e22e>_</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>regexp</span>.<span style=color:#a6e22e>MatchString</span>(<span style=color:#e6db74>`https://i.imgur.com/`</span>, <span style=color:#a6e22e>url</span>); !<span style=color:#a6e22e>matched</span> {
+		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Error</span>(<span style=color:#e6db74>&#34;UploadImage() did not return imgur url&#34;</span>)
+		<span style=color:#a6e22e>t</span>.<span style=color:#a6e22e>Fail</span>()
+	}
+
+}
+</code></pre></div><h2 id=usage>Usage</h2><p>we need to pass <code>[]byte</code> to <code>UploadImage()</code>.</p><p><code>c.FormData()</code>returns <code>*multipart.FileHeader</code>.</p><p><code>*multipart.FileHeader.Open()</code> returns <code>io.Reader</code></p><p>We use <code>ioutil.ReadAll()</code> to read <code>io.Reader</code> to <code>[]byte</code></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#75715e>// imgurUploadServer.go
+</span><span style=color:#75715e></span><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
+
+<span style=color:#f92672>import</span> (
+	<span style=color:#e6db74>&#34;github.com/gin-gonic/gin&#34;</span>
+	<span style=color:#e6db74>&#34;github.com/yenchunli/arts-nthu-backend/pkg/upload&#34;</span>
+	<span style=color:#e6db74>&#34;io/ioutil&#34;</span>
+	<span style=color:#e6db74>&#34;os&#34;</span>
+	<span style=color:#e6db74>&#34;mime/multipart&#34;</span>
+	<span style=color:#e6db74>&#34;net/http&#34;</span>
+)
+
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>main</span>() {
+
+	<span style=color:#a6e22e>r</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>Default</span>()
+	<span style=color:#a6e22e>r</span>.<span style=color:#a6e22e>POST</span>(<span style=color:#e6db74>&#34;/api/v1/upload&#34;</span>, <span style=color:#66d9ef>func</span>(<span style=color:#a6e22e>c</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>Context</span>) {
+		<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>request</span> <span style=color:#66d9ef>struct</span> {
+			<span style=color:#a6e22e>image</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>multipart</span>.<span style=color:#a6e22e>FileHeader</span> <span style=color:#e6db74>`form:image binding:&#34;required&#34;`</span>
+		}
+		<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>req</span> <span style=color:#a6e22e>request</span>
+		<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>ShouldBind</span>(<span style=color:#f92672>&amp;</span><span style=color:#a6e22e>req</span>); <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+			<span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>JSON</span>(<span style=color:#a6e22e>http</span>.<span style=color:#a6e22e>StatusBadRequest</span>, <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>H</span>{
+				<span style=color:#e6db74>&#34;message&#34;</span>: <span style=color:#e6db74>&#34;miss data&#34;</span>,
+			})
+			<span style=color:#66d9ef>return</span>
+		}
+
+
+		<span style=color:#a6e22e>file</span>, <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>FormFile</span>(<span style=color:#e6db74>&#34;image&#34;</span>) 	<span style=color:#75715e>// *Multipart.FileHeader
+</span><span style=color:#75715e></span>		<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>file</span>.<span style=color:#a6e22e>Size</span> <span style=color:#f92672>&lt;=</span><span style=color:#ae81ff>0</span> {
+			<span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>JSON</span>(<span style=color:#ae81ff>500</span>, <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>H</span>{
+				<span style=color:#e6db74>&#34;message&#34;</span>: <span style=color:#a6e22e>err</span>.<span style=color:#a6e22e>Error</span>(),
+			})
+		}
+		<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+			<span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>JSON</span>(<span style=color:#ae81ff>500</span>, <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>H</span>{
+				<span style=color:#e6db74>&#34;message&#34;</span>: <span style=color:#a6e22e>err</span>.<span style=color:#a6e22e>Error</span>(),
+			})
+		}
+
+		<span style=color:#a6e22e>reader</span>, <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>file</span>.<span style=color:#a6e22e>Open</span>()			<span style=color:#75715e>// io.Reader
+</span><span style=color:#75715e></span>		<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+			<span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>JSON</span>(<span style=color:#ae81ff>500</span>, <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>H</span>{
+				<span style=color:#e6db74>&#34;message&#34;</span>: <span style=color:#a6e22e>err</span>.<span style=color:#a6e22e>Error</span>(),
+			})
+		}
+
+		<span style=color:#a6e22e>buf</span>, <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>ioutil</span>.<span style=color:#a6e22e>ReadAll</span>(<span style=color:#a6e22e>reader</span>)	<span style=color:#75715e>// bytes[]
+</span><span style=color:#75715e></span>		<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+			<span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>JSON</span>(<span style=color:#ae81ff>500</span>, <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>H</span>{
+				<span style=color:#e6db74>&#34;message&#34;</span>: <span style=color:#a6e22e>err</span>.<span style=color:#a6e22e>Error</span>(),
+			})
+		}
+
+		<span style=color:#a6e22e>client</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>upload</span>.<span style=color:#a6e22e>NewClient</span>(<span style=color:#a6e22e>os</span>.<span style=color:#a6e22e>Getenv</span>(<span style=color:#e6db74>&#34;IMGUR_UPLOAD_TOKEN&#34;</span>), <span style=color:#e6db74>&#34;https://api.imgur.com/3/upload&#34;</span>)
+		<span style=color:#a6e22e>imgurUrl</span>, <span style=color:#a6e22e>_</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>UploadImage</span>(<span style=color:#a6e22e>buf</span>)
+
+
+		<span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>JSON</span>(<span style=color:#ae81ff>200</span>, <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>H</span>{
+			<span style=color:#e6db74>&#34;url&#34;</span>: <span style=color:#a6e22e>imgurUrl</span>,
+		})
+		<span style=color:#66d9ef>return</span>
+	})
+	<span style=color:#a6e22e>r</span>.<span style=color:#a6e22e>Run</span>() 
+	
+}
+</code></pre></div></div></body></html>
