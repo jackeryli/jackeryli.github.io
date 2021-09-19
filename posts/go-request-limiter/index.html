@@ -1,5 +1,50 @@
-<!doctype html><html lang=en-us><head><link rel=stylesheet href=https://yenchunli.github.io/sass/main.min.9aabe12cad1f025a0e58de0a6f0b145045f98d7834436d97b0e5085d5a1b9e42.css><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css integrity=sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh crossorigin=anonymous><script src=https://code.jquery.com/jquery-3.4.1.slim.min.js integrity=sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js integrity=sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous></script><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel=stylesheet><meta name=viewport content="width=device-width,initial-scale=1"><title>Jack Li</title><link rel=icon href=/img/favicon.ico type=image/x-icon><script src=https://identity.netlify.com/v1/netlify-identity-widget.js></script><script src=https://unpkg.com/netlify-cms@^2.3.1/dist/netlify-cms.js></script><script src=https://unpkg.com/netlify-auth-providers></script></head><body><div style=padding-top:80px class=container><h1>Write a request limiter in Go</h1><p>Date: 2020-04-12</p><p>Tags: <button class="btn btn-outline-info mr-2">Go</button> <button class="btn btn-outline-info mr-2">Redis</button> <button class="btn btn-outline-info mr-2">Gin</button></p><h2>Directory</h2><nav id=TableOfContents><ul><li><a href=#how-to-test>How to test</a></li><li><a href=#design-idea>Design Idea</a></li></ul></nav><h1 id=go-request-limit>Go-Request-limit</h1><p><a href=https://github.com/412988937/go-request-limit>Github</a></p><h2 id=how-to-test>How to test</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>docker run --name redis-lab -p 6379:6379 -d redis
+<!doctype html><html lang=en-us>
+<head>
+<link rel=stylesheet href=https://yenchunli.github.io/sass/main.min.9aabe12cad1f025a0e58de0a6f0b145045f98d7834436d97b0e5085d5a1b9e42.css>
+<link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css integrity=sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh crossorigin=anonymous>
+<script src=https://code.jquery.com/jquery-3.4.1.slim.min.js integrity=sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js integrity=sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo crossorigin=anonymous></script>
+<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel=stylesheet>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Jack Li</title>
+<link rel=icon href=/img/favicon.ico type=image/x-icon>
+<script src=https://identity.netlify.com/v1/netlify-identity-widget.js></script>
+<script src=https://unpkg.com/netlify-cms@^2.3.1/dist/netlify-cms.js></script>
+<script src=https://unpkg.com/netlify-auth-providers></script>
+</head>
+<body>
+<div style=padding-top:80px class=container>
+<h1>Write a request limiter in Go</h1>
+<p>Date: 2020-04-12</p>
+<p>Tags: <button class="btn btn-outline-info mr-2">Go</button> <button class="btn btn-outline-info mr-2">Redis</button> <button class="btn btn-outline-info mr-2">Gin</button> </p>
+<h2>Directory</h2>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#how-to-test>How to test</a></li>
+<li><a href=#design-idea>Design Idea</a></li>
+</ul>
+</nav>
+<h1 id=go-request-limit>Go-Request-limit</h1>
+<p><a href=https://github.com/412988937/go-request-limit>Github</a></p>
+<h2 id=how-to-test>How to test</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>docker run --name redis-lab -p 6379:6379 -d redis
 cd &lt;project-name&gt;
 go build main.go //if necessary
 ./main
-</code></pre></div><h2 id=design-idea>Design Idea</h2><p>There are the scenerio on how to prevent URL from users' request.</p><ol><li>Request come</li><li>Check if user&rsquo;s ip is in the Redis list</li><li>If not, create a redis list, whose key is user&rsquo;s ip. Return.</li><li>If yes, check the redis list with key=(user&rsquo;s ip) and calcuate its length.</li><li>If length is over request limit, return status <code>too many reqest</code>.</li><li>If length is valid, push user&rsquo;s ip to the list and return.</li></ol><ul><li>Return data including <code>X-RateLimit-Remaining</code> and <code>X-RateLimit-Reset</code>. The value of <code>X-RateLimit-Reset</code> is based on the TTL of certain redis list. The TTL will start when the first request comes and will expire in an hour. After an hour, the redis list of certain key will disappear.</li></ul></div></body></html>
+</code></pre></div><h2 id=design-idea>Design Idea</h2>
+<p>There are the scenerio on how to prevent URL from users' request.</p>
+<ol>
+<li>Request come</li>
+<li>Check if user&rsquo;s ip is in the Redis list</li>
+<li>If not, create a redis list, whose key is user&rsquo;s ip. Return.</li>
+<li>If yes, check the redis list with key=(user&rsquo;s ip) and calcuate its length.</li>
+<li>If length is over request limit, return status <code>too many reqest</code>.</li>
+<li>If length is valid, push user&rsquo;s ip to the list and return.</li>
+</ol>
+<ul>
+<li>Return data including <code>X-RateLimit-Remaining</code> and <code>X-RateLimit-Reset</code>. The value of <code>X-RateLimit-Reset</code> is based on the TTL of certain redis list. The TTL will start when the first request comes and will expire in an hour. After an hour, the redis list of certain key will disappear.</li>
+</ul>
+</div>
+</body>
+</html>
