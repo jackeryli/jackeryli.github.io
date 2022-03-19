@@ -21,24 +21,6 @@ Packages Used  gonic/gin: http server bytes: store images encoding/json: process
     </item>
     
     <item>
-      <title>Netstat</title>
-      <link>https://jacklatte.github.io/posts/linux-netstat/</link>
-      <pubDate>Tue, 14 Apr 2020 15:59:31 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/linux-netstat/</guid>
-      <description>A command which often use to check network stats</description>
-    </item>
-    
-    <item>
-      <title>Install ngx_http_geoip_module for ip analysis</title>
-      <link>https://jacklatte.github.io/posts/ngx_http_geoip_module-installation/</link>
-      <pubDate>Tue, 14 Apr 2020 12:18:32 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/ngx_http_geoip_module-installation/</guid>
-      <description>Ngx-http-geoip-module can enable Internet traffic analysis for indivisual conuntry.</description>
-    </item>
-    
-    <item>
       <title>Install nginx-module-vts for monitoring</title>
       <link>https://jacklatte.github.io/posts/nginx-module-vts-installation/</link>
       <pubDate>Tue, 14 Apr 2020 10:23:09 +0800</pubDate>
@@ -54,16 +36,6 @@ Packages Used  gonic/gin: http server bytes: store images encoding/json: process
       
       <guid>https://jacklatte.github.io/projects/sad/</guid>
       <description>This project is built for smart campus</description>
-    </item>
-    
-    <item>
-      <title>Freebsd VM Installation</title>
-      <link>https://jacklatte.github.io/posts/freebsd-vm-install/</link>
-      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/freebsd-vm-install/</guid>
-      <description>Environment Our testbed is running at
- Windows 10 VMware Workstation 15 player  Download FreeBSD Go to Freebsd website. You can download the install image (.iso) or the VM image (.vmdk). In this tutorial, we choose VM image for faster installation.</description>
     </item>
     
     <item>
@@ -114,15 +86,6 @@ Add dependencies in Cargo.toml  Note that attributes is used for #[async_std::ma
       
       <guid>https://jacklatte.github.io/posts/hugo-install/</guid>
       <description>&lt;code&gt;Hugo&lt;/code&gt; is the fastest static website generator in the world. It is really suitable for software developers to generate their personal website. In this tutorial, we start to build up a website which used &lt;code&gt;Hugo&lt;/code&gt;.</description>
-    </item>
-    
-    <item>
-      <title>Rich Content</title>
-      <link>https://jacklatte.github.io/posts/test/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/test/</guid>
-      <description>A brief description of Hugo Shortcodes</description>
     </item>
     
     <item>

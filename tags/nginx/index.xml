@@ -9,16 +9,7 @@
       <link>https://jacklatte.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Apr 2020 12:18:32 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Install ngx_http_geoip_module for ip analysis</title>
-      <link>https://jacklatte.github.io/posts/ngx_http_geoip_module-installation/</link>
-      <pubDate>Tue, 14 Apr 2020 12:18:32 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/ngx_http_geoip_module-installation/</guid>
-      <description>Ngx-http-geoip-module can enable Internet traffic analysis for indivisual conuntry.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 14 Apr 2020 10:23:09 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install nginx-module-vts for monitoring</title>
       <link>https://jacklatte.github.io/posts/nginx-module-vts-installation/</link>

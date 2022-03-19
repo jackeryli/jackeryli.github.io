@@ -38,38 +38,11 @@
     </item>
     
     <item>
-      <title>linux</title>
-      <link>https://jacklatte.github.io/tags/linux/</link>
-      <pubDate>Tue, 14 Apr 2020 15:59:31 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Nginx</title>
       <link>https://jacklatte.github.io/tags/nginx/</link>
-      <pubDate>Tue, 14 Apr 2020 12:18:32 +0800</pubDate>
+      <pubDate>Tue, 14 Apr 2020 10:23:09 +0800</pubDate>
       
       <guid>https://jacklatte.github.io/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>freebsd</title>
-      <link>https://jacklatte.github.io/tags/freebsd/</link>
-      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/tags/freebsd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vm</title>
-      <link>https://jacklatte.github.io/tags/vm/</link>
-      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/tags/vm/</guid>
       <description></description>
     </item>
     
@@ -115,24 +88,6 @@
       <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
       
       <guid>https://jacklatte.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>privacy</title>
-      <link>https://jacklatte.github.io/tags/privacy/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jacklatte.github.io/tags/privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shortcodes</title>
-      <link>https://jacklatte.github.io/tags/shortcodes/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jacklatte.github.io/tags/shortcodes/</guid>
       <description></description>
     </item>
     
