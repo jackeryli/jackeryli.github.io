@@ -154,7 +154,7 @@ Add dependencies in Cargo.toml  Note that attributes is used for #[async_std::ma
       
       <guid>https://jacklatte.github.io/topic/</guid>
       <description>Hugo Tutorial Build your personal website
-QEMU Tutorial New Software-simulated virtual machine</description>
+QEMU Tutorial Software-simulated virtual machine</description>
     </item>
     
   </channel>
