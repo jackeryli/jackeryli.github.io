@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>async-std on Jacklatte☕</title>
+    <link>https://jacklatte.github.io/tags/async-std/</link>
+    <description>Recent content in async-std on Jacklatte☕</description>
+    <image>
+      <url>https://jacklatte.github.io/avatar.jpg</url>
+      <link>https://jacklatte.github.io/avatar.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Apr 2020 14:08:30 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/async-std/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use async-std</title>
+      <link>https://jacklatte.github.io/posts/how-to-use-async-std/</link>
+      <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/how-to-use-async-std/</guid>
+      <description>Now, rust has two ways to write async functions, async-std and tokio. Let&amp;rsquo;s first start with async-std.
+Add dependencies in Cargo.toml  Note that attributes is used for #[async_std::main].
+ Filename: Cargo.toml
+[dependencies] async-std = { version = &amp;#34;1.6.5&amp;#34;, features = [&amp;#34;attributes&amp;#34;] } Write functions Filename: src/hello.rs
+ async main requires return a std::io::Result.
+ #[async_std::main]asyncfn main()-&amp;gt; std::io::Result&amp;lt;()&amp;gt;{println!(&amp;#34;hello world!&amp;#34;);Ok(())}Build your code cargo run </description>
+    </item>
+    
+  </channel>
+</rss>

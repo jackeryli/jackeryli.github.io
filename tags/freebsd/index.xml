@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>freebsd on Jacklatte☕</title>
+    <link>https://jacklatte.github.io/tags/freebsd/</link>
+    <description>Recent content in freebsd on Jacklatte☕</description>
+    <image>
+      <url>https://jacklatte.github.io/avatar.jpg</url>
+      <link>https://jacklatte.github.io/avatar.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Apr 2020 16:18:10 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Freebsd VM Installation</title>
+      <link>https://jacklatte.github.io/posts/freebsd-vm-install/</link>
+      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/freebsd-vm-install/</guid>
+      <description>Environment Our testbed is running at
+ Windows 10 VMware Workstation 15 player  Download FreeBSD Go to Freebsd website. You can download the install image (.iso) or the VM image (.vmdk). In this tutorial, we choose VM image for faster installation.</description>
+    </item>
+    
+  </channel>
+</rss>

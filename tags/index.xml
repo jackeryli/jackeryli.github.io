@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on Jacklatte</title>
+    <title>Tags on Jacklatte☕</title>
     <link>https://jacklatte.github.io/tags/</link>
-    <description>Recent content in Tags on Jacklatte</description>
+    <description>Recent content in Tags on Jacklatte☕</description>
     <image>
       <url>https://jacklatte.github.io/avatar.jpg</url>
       <link>https://jacklatte.github.io/avatar.jpg</link>
@@ -38,6 +38,24 @@
     </item>
     
     <item>
+      <title>linux</title>
+      <link>https://jacklatte.github.io/tags/linux/</link>
+      <pubDate>Tue, 14 Apr 2020 15:59:31 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://jacklatte.github.io/tags/nginx/</link>
+      <pubDate>Tue, 14 Apr 2020 12:18:32 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>kubernetes</title>
       <link>https://jacklatte.github.io/tags/kubernetes/</link>
       <pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate>
@@ -52,6 +70,15 @@
       <pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate>
       
       <guid>https://jacklatte.github.io/tags/pulsar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>freebsd</title>
+      <link>https://jacklatte.github.io/tags/freebsd/</link>
+      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/freebsd/</guid>
       <description></description>
     </item>
     
@@ -74,11 +101,56 @@
     </item>
     
     <item>
+      <title>vm</title>
+      <link>https://jacklatte.github.io/tags/vm/</link>
+      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/vm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>async-std</title>
+      <link>https://jacklatte.github.io/tags/async-std/</link>
+      <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/async-std/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Redis</title>
       <link>https://jacklatte.github.io/tags/redis/</link>
       <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
       
       <guid>https://jacklatte.github.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://jacklatte.github.io/tags/rust/</link>
+      <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github Page</title>
+      <link>https://jacklatte.github.io/tags/github-page/</link>
+      <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/github-page/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://jacklatte.github.io/tags/hugo/</link>
+      <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
