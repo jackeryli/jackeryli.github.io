@@ -81,20 +81,20 @@ Add dependencies in Cargo.toml  Note that attributes is used for #[async_std::ma
     </item>
     
     <item>
-      <title>02: Push hugo to Github Page</title>
-      <link>https://jacklatte.github.io/posts/hugo/hugo-to-github/</link>
+      <title>Push hugo to Github Page</title>
+      <link>https://jacklatte.github.io/posts/hugo-to-github/</link>
       <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/hugo/hugo-to-github/</guid>
+      <guid>https://jacklatte.github.io/posts/hugo-to-github/</guid>
       <description>We push our hugo website to Github Page.</description>
     </item>
     
     <item>
-      <title>01: Install Hugo on MacOS</title>
-      <link>https://jacklatte.github.io/posts/hugo/hugo-install/</link>
+      <title>Install Hugo on MacOS</title>
+      <link>https://jacklatte.github.io/posts/hugo-install/</link>
       <pubDate>Sat, 11 Apr 2020 11:39:20 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/hugo/hugo-install/</guid>
+      <guid>https://jacklatte.github.io/posts/hugo-install/</guid>
       <description>&lt;code&gt;Hugo&lt;/code&gt; is the fastest static website generator in the world. It is really suitable for software developers to generate their personal website. In this tutorial, we start to build up a website which used &lt;code&gt;Hugo&lt;/code&gt;.</description>
     </item>
     

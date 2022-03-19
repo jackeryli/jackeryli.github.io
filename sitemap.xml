@@ -77,9 +77,6 @@
     <loc>https://jacklatte.github.io/posts/go-request-limiter/</loc>
     <lastmod>2020-04-12T14:08:30+08:00</lastmod>
   </url><url>
-    <loc>https://jacklatte.github.io/posts/hugo/hugo-to-github/</loc>
-    <lastmod>2020-04-12T11:39:20+08:00</lastmod>
-  </url><url>
     <loc>https://jacklatte.github.io/tags/github/</loc>
     <lastmod>2020-04-12T11:39:20+08:00</lastmod>
   </url><url>
@@ -89,7 +86,10 @@
     <loc>https://jacklatte.github.io/categories/hugo-tutorials/</loc>
     <lastmod>2020-04-12T11:39:20+08:00</lastmod>
   </url><url>
-    <loc>https://jacklatte.github.io/posts/hugo/hugo-install/</loc>
+    <loc>https://jacklatte.github.io/posts/hugo-to-github/</loc>
+    <lastmod>2020-04-12T11:39:20+08:00</lastmod>
+  </url><url>
+    <loc>https://jacklatte.github.io/posts/hugo-install/</loc>
     <lastmod>2020-04-11T11:39:20+08:00</lastmod>
   </url><url>
     <loc>https://jacklatte.github.io/tags/privacy/</loc>
@@ -105,8 +105,12 @@
   </url><url>
     <loc>https://jacklatte.github.io/archives/</loc>
   </url><url>
+    <loc>https://jacklatte.github.io/hugo-tutorial/</loc>
+  </url><url>
     <loc>https://jacklatte.github.io/search/</loc>
   </url><url>
     <loc>https://jacklatte.github.io/series/</loc>
+  </url><url>
+    <loc>https://jacklatte.github.io/topic/</loc>
   </url>
 </urlset>

@@ -11,11 +11,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 12 Apr 2020 11:39:20 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>02: Push hugo to Github Page</title>
-      <link>https://jacklatte.github.io/posts/hugo/hugo-to-github/</link>
+      <title>Push hugo to Github Page</title>
+      <link>https://jacklatte.github.io/posts/hugo-to-github/</link>
       <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/hugo/hugo-to-github/</guid>
+      <guid>https://jacklatte.github.io/posts/hugo-to-github/</guid>
       <description>We push our hugo website to Github Page.</description>
     </item>
     
