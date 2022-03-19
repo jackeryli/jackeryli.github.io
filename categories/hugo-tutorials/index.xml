@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>hugo on Jacklatte☕</title>
-    <link>https://jacklatte.github.io/tags/hugo/</link>
-    <description>Recent content in hugo on Jacklatte☕</description>
+    <title>Hugo Tutorials on Jacklatte☕</title>
+    <link>https://jacklatte.github.io/categories/hugo-tutorials/</link>
+    <description>Recent content in Hugo Tutorials on Jacklatte☕</description>
     <image>
       <url>https://jacklatte.github.io/avatar.jpg</url>
       <link>https://jacklatte.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 12 Apr 2020 11:39:20 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Apr 2020 11:39:20 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/categories/hugo-tutorials/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>02: Push hugo to Github Page</title>
       <link>https://jacklatte.github.io/posts/hugo/hugo-to-github/</link>

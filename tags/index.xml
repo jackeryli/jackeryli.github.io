@@ -56,47 +56,11 @@
     </item>
     
     <item>
-      <title>kubernetes</title>
-      <link>https://jacklatte.github.io/tags/kubernetes/</link>
-      <pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pulsar</title>
-      <link>https://jacklatte.github.io/tags/pulsar/</link>
-      <pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/tags/pulsar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>freebsd</title>
       <link>https://jacklatte.github.io/tags/freebsd/</link>
       <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
       
       <guid>https://jacklatte.github.io/tags/freebsd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>postgresql</title>
-      <link>https://jacklatte.github.io/tags/postgresql/</link>
-      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/tags/postgresql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>react</title>
-      <link>https://jacklatte.github.io/tags/react/</link>
-      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/tags/react/</guid>
       <description></description>
     </item>
     
@@ -137,16 +101,16 @@
     </item>
     
     <item>
-      <title>Github Page</title>
-      <link>https://jacklatte.github.io/tags/github-page/</link>
+      <title>github</title>
+      <link>https://jacklatte.github.io/tags/github/</link>
       <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/tags/github-page/</guid>
+      <guid>https://jacklatte.github.io/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hugo</title>
+      <title>hugo</title>
       <link>https://jacklatte.github.io/tags/hugo/</link>
       <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
       

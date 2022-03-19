@@ -21,15 +21,6 @@ Packages Used  gonic/gin: http server bytes: store images encoding/json: process
     </item>
     
     <item>
-      <title>NTHU Arts Center Website</title>
-      <link>https://jacklatte.github.io/projects/arts-nthu/</link>
-      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/projects/arts-nthu/</guid>
-      <description>NTHU Arts Center Official Website, built by go, postgresql, react and docker</description>
-    </item>
-    
-    <item>
       <title>Write a request limiter in Go</title>
       <link>https://jacklatte.github.io/posts/go-request-limiter/</link>
       <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
