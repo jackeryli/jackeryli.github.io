@@ -1,1 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on jacklatte Website</title><link>https://jacklatte.github.io/projects/</link><description>Recent content in Projects on jacklatte Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 13 Apr 2020 16:18:10 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>Stream Analytics Platform</title><link>https://jacklatte.github.io/projects/sad/</link><pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate><guid>https://jacklatte.github.io/projects/sad/</guid><description/></item><item><title>NTHU Arts Center Website</title><link>https://jacklatte.github.io/projects/arts-nthu/</link><pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate><guid>https://jacklatte.github.io/projects/arts-nthu/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Projects on Jacklatte</title>
+    <link>https://jacklatte.github.io/projects/</link>
+    <description>Recent content in Projects on Jacklatte</description>
+    <image>
+      <url>https://jacklatte.github.io/avatar.jpg</url>
+      <link>https://jacklatte.github.io/avatar.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Apr 2020 16:18:10 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stream Analytics Platform</title>
+      <link>https://jacklatte.github.io/projects/sad/</link>
+      <pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/projects/sad/</guid>
+      <description>This project is built for smart campus</description>
+    </item>
+    
+    <item>
+      <title>NTHU Arts Center Website</title>
+      <link>https://jacklatte.github.io/projects/arts-nthu/</link>
+      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/projects/arts-nthu/</guid>
+      <description>NTHU Arts Center Official Website, built by go, postgresql, react and docker</description>
+    </item>
+    
+  </channel>
+</rss>

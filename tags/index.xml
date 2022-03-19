@@ -1,1 +1,104 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on jacklatte Website</title><link>https://jacklatte.github.io/tags/</link><description>Recent content in Tags on jacklatte Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 10 Apr 2021 21:43:38 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>gin</title><link>https://jacklatte.github.io/tags/gin/</link><pubDate>Sat, 10 Apr 2021 21:43:38 +0800</pubDate><guid>https://jacklatte.github.io/tags/gin/</guid><description/></item><item><title>go</title><link>https://jacklatte.github.io/tags/go/</link><pubDate>Sat, 10 Apr 2021 21:43:38 +0800</pubDate><guid>https://jacklatte.github.io/tags/go/</guid><description/></item><item><title>imgur</title><link>https://jacklatte.github.io/tags/imgur/</link><pubDate>Sat, 10 Apr 2021 21:43:38 +0800</pubDate><guid>https://jacklatte.github.io/tags/imgur/</guid><description/></item><item><title>kubernetes</title><link>https://jacklatte.github.io/tags/kubernetes/</link><pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate><guid>https://jacklatte.github.io/tags/kubernetes/</guid><description/></item><item><title>pulsar</title><link>https://jacklatte.github.io/tags/pulsar/</link><pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate><guid>https://jacklatte.github.io/tags/pulsar/</guid><description/></item><item><title>postgresql</title><link>https://jacklatte.github.io/tags/postgresql/</link><pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate><guid>https://jacklatte.github.io/tags/postgresql/</guid><description/></item><item><title>react</title><link>https://jacklatte.github.io/tags/react/</link><pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate><guid>https://jacklatte.github.io/tags/react/</guid><description/></item><item><title>Redis</title><link>https://jacklatte.github.io/tags/redis/</link><pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate><guid>https://jacklatte.github.io/tags/redis/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Jacklatte</title>
+    <link>https://jacklatte.github.io/tags/</link>
+    <description>Recent content in Tags on Jacklatte</description>
+    <image>
+      <url>https://jacklatte.github.io/avatar.jpg</url>
+      <link>https://jacklatte.github.io/avatar.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 Apr 2021 21:43:38 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gin</title>
+      <link>https://jacklatte.github.io/tags/gin/</link>
+      <pubDate>Sat, 10 Apr 2021 21:43:38 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/gin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://jacklatte.github.io/tags/go/</link>
+      <pubDate>Sat, 10 Apr 2021 21:43:38 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imgur</title>
+      <link>https://jacklatte.github.io/tags/imgur/</link>
+      <pubDate>Sat, 10 Apr 2021 21:43:38 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/imgur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://jacklatte.github.io/tags/kubernetes/</link>
+      <pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pulsar</title>
+      <link>https://jacklatte.github.io/tags/pulsar/</link>
+      <pubDate>Mon, 13 Apr 2020 16:18:10 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/pulsar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgresql</title>
+      <link>https://jacklatte.github.io/tags/postgresql/</link>
+      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://jacklatte.github.io/tags/react/</link>
+      <pubDate>Sun, 12 Apr 2020 16:18:10 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redis</title>
+      <link>https://jacklatte.github.io/tags/redis/</link>
+      <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privacy</title>
+      <link>https://jacklatte.github.io/tags/privacy/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shortcodes</title>
+      <link>https://jacklatte.github.io/tags/shortcodes/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jacklatte.github.io/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
