@@ -9,7 +9,29 @@
       <link>https://jacklatte.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 10 Apr 2021 21:43:38 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Apr 2022 17:20:52 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Useful Commands</title>
+      <link>https://jacklatte.github.io/posts/docker-useful-commands/</link>
+      <pubDate>Sat, 09 Apr 2022 17:20:52 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/docker-useful-commands/</guid>
+      <description>Docker container has manys status which shows in the following table:
+   Status Description     created    restarting    running    removing    paused    exited    dead     # Show status=running containers docker ps # Show all containers docker ps -a # Filter status=exit containers docker ps --filter status=exit How to update running container config?</description>
+    </item>
+    
+    <item>
+      <title>Docker Introduction</title>
+      <link>https://jacklatte.github.io/posts/docker-introduction/</link>
+      <pubDate>Sat, 09 Apr 2022 12:16:46 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/docker-introduction/</guid>
+      <description>What is docker? Docker uses namespace and cgroup to isolate processes.
+Run nginx with docker docker run -d -p 8080:80 ubuntu/nginx What&amp;rsquo;s the difference of a process running in docker than bare metal ? If we run ps -ef on host computer, it shows that
+UID PID COMMAND root 1 /sbin/init systemd 29 nginx But if we run ps -ef inside container, it shows that
+UID PID COMMAND root 1 nginx The main difference is that PID is different.</description>
+    </item>
+    
     <item>
       <title>Write a imgur upload service with go</title>
       <link>https://jacklatte.github.io/posts/go-imgur/</link>
