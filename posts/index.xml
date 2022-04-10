@@ -16,8 +16,8 @@
       <pubDate>Sat, 09 Apr 2022 17:20:52 +0800</pubDate>
       
       <guid>https://jacklatte.github.io/posts/docker-useful-commands/</guid>
-      <description>Docker container has manys status which shows in the following table:
-   Status Description     created    restarting    running    removing    paused    exited    dead     # Show status=running containers docker ps # Show all containers docker ps -a # Filter status=exit containers docker ps --filter status=exit How to update running container config?</description>
+      <description>List containers Docker container has manys status which shows in the following table:
+   Status Description     created Create a container but not start before   restarting Meet problems and try to restart   running Working   removing Try to remove   paused Suspend   exited Stop   dead Try to remove container but fail    # Show status=running containers docker ps # Show all containers docker ps -a # Filter status=exit containers docker ps --filter status=exit # Show status Get container&amp;rsquo;s detail # Get All messages docker inspect nginx-test # Get Status docker inspect -f {{.</description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@
       <description>What is docker? Docker uses namespace and cgroup to isolate processes.
 Run nginx with docker docker run -d -p 8080:80 ubuntu/nginx What&amp;rsquo;s the difference of a process running in docker than bare metal ? If we run ps -ef on host computer, it shows that
 UID PID COMMAND root 1 /sbin/init systemd 29 nginx But if we run ps -ef inside container, it shows that
-UID PID COMMAND root 1 nginx The main difference is that PID is different.</description>
+UID PID COMMAND root 1 nginx Namespace Introduction The main difference is that PID is different.</description>
     </item>
     
     <item>
