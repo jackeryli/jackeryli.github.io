@@ -9,47 +9,7 @@
       <link>https://jacklatte.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Jun 2022 12:16:46 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Study vbird shell script</title>
-      <link>https://jacklatte.github.io/posts/2022-06-06-study-vbird-shell-script/</link>
-      <pubDate>Mon, 06 Jun 2022 12:16:46 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2022-06-06-study-vbird-shell-script/</guid>
-      <description>Shell scripts command Some useful commands like awk, sed, sort, wc help us process text files.
-Shell scripts command grep Basic Usage Usages Fetch no blank line and no comments Find all files started with &amp;lsquo;b&amp;rsquo; sed awk sort wc find du Find larget files in certain directory grep -v: reverse -i: don&amp;rsquo;t care capital character
-Basic Usage # net grep -n &amp;#39;net&amp;#39; test.txt # nat, net grep -n &amp;#39;n[ae]t&amp;#39; test.</description>
-    </item>
-    
-    <item>
-      <title>Read k3s install script</title>
-      <link>https://jacklatte.github.io/posts/2022-06-03-read-k3s-install-script/</link>
-      <pubDate>Fri, 03 Jun 2022 12:16:46 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2022-06-03-read-k3s-install-script/</guid>
-      <description>Shell script Command Description -e check if exists -o nogolp Prevent wildcard character $@ all args ($1,$2,$3&amp;hellip;.) -x check if executable type locate the command /dev/null 2&amp;gt;$1 redirect stdout and stderr to /dev/null #!/bin/sh set -e set -o nogolp fatal() { echo &amp;#39;[ERROR] &amp;#39; &amp;#34;$@&amp;#34; &amp;gt;&amp;amp;2 exit 1 } # --- fatal if no systemd or openrc --- verify_system() { if [ -x /sbin/openrc-run ]; then HAS_OPENRC=true return fi if [ -x /bin/systemctl ] || type systemctl &amp;gt; /dev/null 2&amp;gt;&amp;amp;1; then HAS_SYSTEMD=true return fi fatal &amp;#39;Can not find systemd or openrc to use as a process supervisor for k3s&amp;#39; } if if [-x /bin/sh]; then elif [-x /bin/bash]; then else echo &amp;#34;no&amp;#34; fi case case ${1} in &amp;#34;one&amp;#34;) echo &amp;#34;Your choice is ONE&amp;#34; ;; &amp;#34;two&amp;#34;) echo &amp;#34;Your choice is TWO&amp;#34; ;; &amp;#34;three&amp;#34;) echo &amp;#34;Your choice is THREE&amp;#34; ;; *) echo &amp;#34;Usage ${0} {one|two|three}&amp;#34; ;; esac for loop </description>
-    </item>
-    
-    <item>
-      <title>Linux IO redirection</title>
-      <link>https://jacklatte.github.io/posts/2022-06-02-linux-io-redirection/</link>
-      <pubDate>Thu, 02 Jun 2022 12:16:46 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2022-06-02-linux-io-redirection/</guid>
-      <description>IO redirection 0 - stdin 1 - stdout 2 - stderr
-# export stdout to output.txt, stderr to error.txt ls -al test &amp;gt;output.txt 2&amp;gt;error.txt # export stdout to output.txt, redirect stderr to stdout ls -al test&amp;gt;output.txt 2&amp;gt;$1 </description>
-    </item>
-    
-    <item>
-      <title>Java multi-thread programming with executor service</title>
-      <link>https://jacklatte.github.io/posts/2022-06-01-java-executor-service/</link>
-      <pubDate>Wed, 01 Jun 2022 12:16:46 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2022-06-01-java-executor-service/</guid>
-      <description>Executor Service We create a Callable Object to construct a custom runnable task.
-package com.jack; import java.util.Random; import java.util.concurrent.Callable; public class BankBatchTask implements Callable&amp;lt;String&amp;gt; { private static final String OK = &amp;#34;0000&amp;#34;; private static final String TIME_EXPIRED = &amp;#34;4000&amp;#34;; private static final String INTERNAL_SERVER_ERROR = &amp;#34;9000&amp;#34;; Random random = new Random(); @Override public String call() throws Exception { try { int sleepTime = random.nextInt(10000); Thread.sleep(sleepTime); if(sleepTime &amp;gt; 500) return TIME_EXPIRED; return OK; } catch(Exception e) { e.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 19 Apr 2022 12:16:46 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java String Implementation</title>
       <link>https://jacklatte.github.io/posts/2022-04-19-java-string-implementation/</link>
