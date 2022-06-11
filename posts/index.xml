@@ -9,7 +9,47 @@
       <link>https://jacklatte.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 19 Apr 2022 12:16:46 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jun 2022 12:16:46 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Study vbird shell script</title>
+      <link>https://jacklatte.github.io/posts/2022-06-06-study-vbird-shell-script/</link>
+      <pubDate>Mon, 06 Jun 2022 12:16:46 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/2022-06-06-study-vbird-shell-script/</guid>
+      <description>Shell scripts command Some useful commands like awk, sed, sort, wc help us process text files.
+Shell scripts command grep Basic Usage Usages Fetch no blank line and no comments Find all files started with &amp;lsquo;b&amp;rsquo; sed awk sort wc find du Find larget files in certain directory grep -v: reverse -i: don&amp;rsquo;t care capital character
+Basic Usage # net grep -n &amp;#39;net&amp;#39; test.txt # nat, net grep -n &amp;#39;n[ae]t&amp;#39; test.</description>
+    </item>
+    
+    <item>
+      <title>Read k3s install script</title>
+      <link>https://jacklatte.github.io/posts/2022-06-03-read-k3s-install-script/</link>
+      <pubDate>Fri, 03 Jun 2022 12:16:46 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/2022-06-03-read-k3s-install-script/</guid>
+      <description>Shell script Command Description -e check if exists -o nogolp Prevent wildcard character $@ all args ($1,$2,$3&amp;hellip;.) -x check if executable type locate the command /dev/null 2&amp;gt;$1 redirect stdout and stderr to /dev/null #!/bin/sh set -e set -o nogolp fatal() { echo &amp;#39;[ERROR] &amp;#39; &amp;#34;$@&amp;#34; &amp;gt;&amp;amp;2 exit 1 } # --- fatal if no systemd or openrc --- verify_system() { if [ -x /sbin/openrc-run ]; then HAS_OPENRC=true return fi if [ -x /bin/systemctl ] || type systemctl &amp;gt; /dev/null 2&amp;gt;&amp;amp;1; then HAS_SYSTEMD=true return fi fatal &amp;#39;Can not find systemd or openrc to use as a process supervisor for k3s&amp;#39; } if if [-x /bin/sh]; then elif [-x /bin/bash]; then else echo &amp;#34;no&amp;#34; fi case case ${1} in &amp;#34;one&amp;#34;) echo &amp;#34;Your choice is ONE&amp;#34; ;; &amp;#34;two&amp;#34;) echo &amp;#34;Your choice is TWO&amp;#34; ;; &amp;#34;three&amp;#34;) echo &amp;#34;Your choice is THREE&amp;#34; ;; *) echo &amp;#34;Usage ${0} {one|two|three}&amp;#34; ;; esac for loop </description>
+    </item>
+    
+    <item>
+      <title>Linux IO redirection</title>
+      <link>https://jacklatte.github.io/posts/2022-06-02-linux-io-redirection/</link>
+      <pubDate>Thu, 02 Jun 2022 12:16:46 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/2022-06-02-linux-io-redirection/</guid>
+      <description>IO redirection 0 - stdin 1 - stdout 2 - stderr
+# export stdout to output.txt, stderr to error.txt ls -al test &amp;gt;output.txt 2&amp;gt;error.txt # export stdout to output.txt, redirect stderr to stdout ls -al test&amp;gt;output.txt 2&amp;gt;$1 </description>
+    </item>
+    
+    <item>
+      <title>Java multi-thread programming with executor service</title>
+      <link>https://jacklatte.github.io/posts/2022-06-01-java-executor-service/</link>
+      <pubDate>Wed, 01 Jun 2022 12:16:46 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/2022-06-01-java-executor-service/</guid>
+      <description>Executor Service We create a Callable Object to construct a custom runnable task.
+package com.jack; import java.util.Random; import java.util.concurrent.Callable; public class BankBatchTask implements Callable&amp;lt;String&amp;gt; { private static final String OK = &amp;#34;0000&amp;#34;; private static final String TIME_EXPIRED = &amp;#34;4000&amp;#34;; private static final String INTERNAL_SERVER_ERROR = &amp;#34;9000&amp;#34;; Random random = new Random(); @Override public String call() throws Exception { try { int sleepTime = random.nextInt(10000); Thread.sleep(sleepTime); if(sleepTime &amp;gt; 500) return TIME_EXPIRED; return OK; } catch(Exception e) { e.</description>
+    </item>
+    
     <item>
       <title>Java String Implementation</title>
       <link>https://jacklatte.github.io/posts/2022-04-19-java-string-implementation/</link>
@@ -22,20 +62,20 @@ public final class String implements java.io.Serializable, Comparable&amp;lt;Str
     
     <item>
       <title>Docker Useful Commands</title>
-      <link>https://jacklatte.github.io/posts/docker-useful-commands/</link>
-      <pubDate>Sat, 09 Apr 2022 17:20:52 +0800</pubDate>
+      <link>https://jacklatte.github.io/posts/2022-04-10-docker-useful-commands/</link>
+      <pubDate>Sun, 10 Apr 2022 17:20:52 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/docker-useful-commands/</guid>
+      <guid>https://jacklatte.github.io/posts/2022-04-10-docker-useful-commands/</guid>
       <description>List containers Docker container has manys status which shows in the following table:
-   Status Description     created Create a container but not start before   restarting Meet problems and try to restart   running Working   removing Try to remove   paused Suspend   exited Stop   dead Try to remove container but fail    # Show status=running containers docker ps # Show all containers docker ps -a # Filter status=exit containers docker ps --filter status=exit # Show status Get container&amp;rsquo;s detail # Get All messages docker inspect nginx-test # Get Status docker inspect -f {{.</description>
+Status Description created Create a container but not start before restarting Meet problems and try to restart running Working removing Try to remove paused Suspend exited Stop dead Try to remove container but fail # Show status=running containers docker ps # Show all containers docker ps -a # Filter status=exit containers docker ps --filter status=exit # Show status Get container&amp;rsquo;s detail # Get All messages docker inspect nginx-test # Get Status docker inspect -f {{.</description>
     </item>
     
     <item>
       <title>Docker Introduction</title>
-      <link>https://jacklatte.github.io/posts/docker-introduction/</link>
+      <link>https://jacklatte.github.io/posts/2022-04-09-docker-introduction/</link>
       <pubDate>Sat, 09 Apr 2022 12:16:46 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/docker-introduction/</guid>
+      <guid>https://jacklatte.github.io/posts/2022-04-09-docker-introduction/</guid>
       <description>What is docker? Docker uses namespace and cgroup to isolate processes.
 Run nginx with docker docker run -d -p 8080:80 ubuntu/nginx What&amp;rsquo;s the difference of a process running in docker than bare metal ? If we run ps -ef on host computer, it shows that
 UID PID COMMAND root 1 /sbin/init systemd 29 nginx But if we run ps -ef inside container, it shows that
@@ -44,61 +84,70 @@ UID PID COMMAND root 1 nginx Namespace Introduction The main difference is that 
     
     <item>
       <title>Write a imgur upload service with go</title>
-      <link>https://jacklatte.github.io/posts/go-imgur/</link>
+      <link>https://jacklatte.github.io/posts/2021-04-10-go-imgur/</link>
       <pubDate>Sat, 10 Apr 2021 21:43:38 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/go-imgur/</guid>
+      <guid>https://jacklatte.github.io/posts/2021-04-10-go-imgur/</guid>
       <description>Background Most of the services need a image upload services. Some applications like Ptt, Dcard and HackMD use Imgur to store pictures. Imgur provides free spaces for users to upload their images, and it also provides API so that programers can upload images by sending POST request. In this tutorial, we are going to build a imgur upload service.
-Packages Used  gonic/gin: http server bytes: store images encoding/json: process response io: transfer io.</description>
+Packages Used gonic/gin: http server bytes: store images encoding/json: process response io: transfer io.</description>
+    </item>
+    
+    <item>
+      <title>Install ngx_http_geoip_module for ip analysis</title>
+      <link>https://jacklatte.github.io/posts/2020-04-14-ngx_http_geoip_module-installation/</link>
+      <pubDate>Tue, 14 Apr 2020 12:18:32 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/2020-04-14-ngx_http_geoip_module-installation/</guid>
+      <description>Ngx-http-geoip-module can enable Internet traffic analysis for indivisual conuntry.</description>
     </item>
     
     <item>
       <title>Install nginx-module-vts for monitoring</title>
-      <link>https://jacklatte.github.io/posts/nginx-module-vts-installation/</link>
+      <link>https://jacklatte.github.io/posts/2020-04-14-nginx-module-vts-installation/</link>
       <pubDate>Tue, 14 Apr 2020 10:23:09 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/nginx-module-vts-installation/</guid>
+      <guid>https://jacklatte.github.io/posts/2020-04-14-nginx-module-vts-installation/</guid>
       <description>Nginx-module-vts is designed to monitor Internet traffic on Nginx.</description>
     </item>
     
     <item>
       <title>How to use async-std</title>
-      <link>https://jacklatte.github.io/posts/how-to-use-async-std/</link>
+      <link>https://jacklatte.github.io/posts/2020-04-12-how-to-use-async-std/</link>
       <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/how-to-use-async-std/</guid>
+      <guid>https://jacklatte.github.io/posts/2020-04-12-how-to-use-async-std/</guid>
       <description>Now, rust has two ways to write async functions, async-std and tokio. Let&amp;rsquo;s first start with async-std.
-Add dependencies in Cargo.toml  Note that attributes is used for #[async_std::main].
- Filename: Cargo.toml
+Add dependencies in Cargo.toml Note that attributes is used for #[async_std::main].
+Filename: Cargo.toml
 [dependencies] async-std = { version = &amp;#34;1.6.5&amp;#34;, features = [&amp;#34;attributes&amp;#34;] } Write functions Filename: src/hello.rs
- async main requires return a std::io::Result.
- #[async_std::main]asyncfn main()-&amp;gt; std::io::Result&amp;lt;()&amp;gt;{println!(&amp;#34;hello world!&amp;#34;);Ok(())}Build your code cargo run </description>
+async main requires return a std::io::Result.
+#[async_std::main] async fn main() -&amp;gt; std::io::Result&amp;lt;()&amp;gt; { println!(&amp;#34;hello world!&amp;#34;); Ok(()) } Build your code cargo run </description>
     </item>
     
     <item>
       <title>Write a request limiter in Go</title>
-      <link>https://jacklatte.github.io/posts/go-request-limiter/</link>
+      <link>https://jacklatte.github.io/posts/2021-04-12-go-request-limiter/</link>
       <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/go-request-limiter/</guid>
+      <guid>https://jacklatte.github.io/posts/2021-04-12-go-request-limiter/</guid>
       <description>A middleware which can restrict ip request in certain time window</description>
     </item>
     
     <item>
       <title>Push hugo to Github Page</title>
-      <link>https://jacklatte.github.io/posts/hugo-to-github/</link>
+      <link>https://jacklatte.github.io/posts/2020-04-12-hugo-to-github/</link>
       <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/hugo-to-github/</guid>
+      <guid>https://jacklatte.github.io/posts/2020-04-12-hugo-to-github/</guid>
       <description>We push our hugo website to Github Page.</description>
     </item>
     
     <item>
       <title>Install Hugo on MacOS</title>
-      <link>https://jacklatte.github.io/posts/hugo-install/</link>
+      <link>https://jacklatte.github.io/posts/2020-04-11-hugo-install/</link>
       <pubDate>Sat, 11 Apr 2020 11:39:20 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/hugo-install/</guid>
+      <guid>https://jacklatte.github.io/posts/2020-04-11-hugo-install/</guid>
       <description>&lt;code&gt;Hugo&lt;/code&gt; is the fastest static website generator in the world. It is really suitable for software developers to generate their personal website. In this tutorial, we start to build up a website which used &lt;code&gt;Hugo&lt;/code&gt;.</description>
     </item>
     

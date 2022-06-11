@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>linux on Jacklatte☕</title>
+    <link>https://jacklatte.github.io/tags/linux/</link>
+    <description>Recent content in linux on Jacklatte☕</description>
+    <image>
+      <url>https://jacklatte.github.io/avatar.jpg</url>
+      <link>https://jacklatte.github.io/avatar.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 06 Jun 2022 12:16:46 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Study vbird shell script</title>
+      <link>https://jacklatte.github.io/posts/2022-06-06-study-vbird-shell-script/</link>
+      <pubDate>Mon, 06 Jun 2022 12:16:46 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/2022-06-06-study-vbird-shell-script/</guid>
+      <description>Shell scripts command Some useful commands like awk, sed, sort, wc help us process text files.
+Shell scripts command grep Basic Usage Usages Fetch no blank line and no comments Find all files started with &amp;lsquo;b&amp;rsquo; sed awk sort wc find du Find larget files in certain directory grep -v: reverse -i: don&amp;rsquo;t care capital character
+Basic Usage # net grep -n &amp;#39;net&amp;#39; test.txt # nat, net grep -n &amp;#39;n[ae]t&amp;#39; test.</description>
+    </item>
+    
+    <item>
+      <title>Read k3s install script</title>
+      <link>https://jacklatte.github.io/posts/2022-06-03-read-k3s-install-script/</link>
+      <pubDate>Fri, 03 Jun 2022 12:16:46 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/2022-06-03-read-k3s-install-script/</guid>
+      <description>Shell script Command Description -e check if exists -o nogolp Prevent wildcard character $@ all args ($1,$2,$3&amp;hellip;.) -x check if executable type locate the command /dev/null 2&amp;gt;$1 redirect stdout and stderr to /dev/null #!/bin/sh set -e set -o nogolp fatal() { echo &amp;#39;[ERROR] &amp;#39; &amp;#34;$@&amp;#34; &amp;gt;&amp;amp;2 exit 1 } # --- fatal if no systemd or openrc --- verify_system() { if [ -x /sbin/openrc-run ]; then HAS_OPENRC=true return fi if [ -x /bin/systemctl ] || type systemctl &amp;gt; /dev/null 2&amp;gt;&amp;amp;1; then HAS_SYSTEMD=true return fi fatal &amp;#39;Can not find systemd or openrc to use as a process supervisor for k3s&amp;#39; } if if [-x /bin/sh]; then elif [-x /bin/bash]; then else echo &amp;#34;no&amp;#34; fi case case ${1} in &amp;#34;one&amp;#34;) echo &amp;#34;Your choice is ONE&amp;#34; ;; &amp;#34;two&amp;#34;) echo &amp;#34;Your choice is TWO&amp;#34; ;; &amp;#34;three&amp;#34;) echo &amp;#34;Your choice is THREE&amp;#34; ;; *) echo &amp;#34;Usage ${0} {one|two|three}&amp;#34; ;; esac for loop </description>
+    </item>
+    
+    <item>
+      <title>Linux IO redirection</title>
+      <link>https://jacklatte.github.io/posts/2022-06-02-linux-io-redirection/</link>
+      <pubDate>Thu, 02 Jun 2022 12:16:46 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/2022-06-02-linux-io-redirection/</guid>
+      <description>IO redirection 0 - stdin 1 - stdout 2 - stderr
+# export stdout to output.txt, stderr to error.txt ls -al test &amp;gt;output.txt 2&amp;gt;error.txt # export stdout to output.txt, redirect stderr to stdout ls -al test&amp;gt;output.txt 2&amp;gt;$1 </description>
+    </item>
+    
+  </channel>
+</rss>

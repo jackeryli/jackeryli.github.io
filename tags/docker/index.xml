@@ -9,23 +9,23 @@
       <link>https://jacklatte.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 09 Apr 2022 17:20:52 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Apr 2022 17:20:52 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker Useful Commands</title>
-      <link>https://jacklatte.github.io/posts/docker-useful-commands/</link>
-      <pubDate>Sat, 09 Apr 2022 17:20:52 +0800</pubDate>
+      <link>https://jacklatte.github.io/posts/2022-04-10-docker-useful-commands/</link>
+      <pubDate>Sun, 10 Apr 2022 17:20:52 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/docker-useful-commands/</guid>
+      <guid>https://jacklatte.github.io/posts/2022-04-10-docker-useful-commands/</guid>
       <description>List containers Docker container has manys status which shows in the following table:
-   Status Description     created Create a container but not start before   restarting Meet problems and try to restart   running Working   removing Try to remove   paused Suspend   exited Stop   dead Try to remove container but fail    # Show status=running containers docker ps # Show all containers docker ps -a # Filter status=exit containers docker ps --filter status=exit # Show status Get container&amp;rsquo;s detail # Get All messages docker inspect nginx-test # Get Status docker inspect -f {{.</description>
+Status Description created Create a container but not start before restarting Meet problems and try to restart running Working removing Try to remove paused Suspend exited Stop dead Try to remove container but fail # Show status=running containers docker ps # Show all containers docker ps -a # Filter status=exit containers docker ps --filter status=exit # Show status Get container&amp;rsquo;s detail # Get All messages docker inspect nginx-test # Get Status docker inspect -f {{.</description>
     </item>
     
     <item>
       <title>Docker Introduction</title>
-      <link>https://jacklatte.github.io/posts/docker-introduction/</link>
+      <link>https://jacklatte.github.io/posts/2022-04-09-docker-introduction/</link>
       <pubDate>Sat, 09 Apr 2022 12:16:46 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/docker-introduction/</guid>
+      <guid>https://jacklatte.github.io/posts/2022-04-09-docker-introduction/</guid>
       <description>What is docker? Docker uses namespace and cgroup to isolate processes.
 Run nginx with docker docker run -d -p 8080:80 ubuntu/nginx What&amp;rsquo;s the difference of a process running in docker than bare metal ? If we run ps -ef on host computer, it shows that
 UID PID COMMAND root 1 /sbin/init systemd 29 nginx But if we run ps -ef inside container, it shows that

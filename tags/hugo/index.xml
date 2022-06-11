@@ -12,19 +12,19 @@
     <lastBuildDate>Sun, 12 Apr 2020 11:39:20 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Push hugo to Github Page</title>
-      <link>https://jacklatte.github.io/posts/hugo-to-github/</link>
+      <link>https://jacklatte.github.io/posts/2020-04-12-hugo-to-github/</link>
       <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/hugo-to-github/</guid>
+      <guid>https://jacklatte.github.io/posts/2020-04-12-hugo-to-github/</guid>
       <description>We push our hugo website to Github Page.</description>
     </item>
     
     <item>
       <title>Install Hugo on MacOS</title>
-      <link>https://jacklatte.github.io/posts/hugo-install/</link>
+      <link>https://jacklatte.github.io/posts/2020-04-11-hugo-install/</link>
       <pubDate>Sat, 11 Apr 2020 11:39:20 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/hugo-install/</guid>
+      <guid>https://jacklatte.github.io/posts/2020-04-11-hugo-install/</guid>
       <description>&lt;code&gt;Hugo&lt;/code&gt; is the fastest static website generator in the world. It is really suitable for software developers to generate their personal website. In this tutorial, we start to build up a website which used &lt;code&gt;Hugo&lt;/code&gt;.</description>
     </item>
     
