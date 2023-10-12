@@ -32,16 +32,6 @@ public final class String implements java.io.Serializable, Comparable&amp;lt;Str
     </item>
     
     <item>
-      <title>Docker Useful Commands</title>
-      <link>https://jacklatte.github.io/posts/2022-04-10-docker-useful-commands/</link>
-      <pubDate>Sun, 10 Apr 2022 17:20:52 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2022-04-10-docker-useful-commands/</guid>
-      <description>List containers Docker container has manys status which shows in the following table:
-Status Description created Create a container but not start before restarting Meet problems and try to restart running Working removing Try to remove paused Suspend exited Stop dead Try to remove container but fail # Show status=running containers docker ps # Show all containers docker ps -a # Filter status=exit containers docker ps --filter status=exit # Show status Get container&amp;rsquo;s detail # Get All messages docker inspect nginx-test # Get Status docker inspect -f {{.</description>
-    </item>
-    
-    <item>
       <title>Docker Introduction</title>
       <link>https://jacklatte.github.io/posts/2022-04-09-docker-introduction/</link>
       <pubDate>Sat, 09 Apr 2022 12:16:46 +0800</pubDate>
@@ -64,62 +54,12 @@ Packages Used gonic/gin: http server bytes: store images encoding/json: process 
     </item>
     
     <item>
-      <title>Install ngx_http_geoip_module for ip analysis</title>
-      <link>https://jacklatte.github.io/posts/2020-04-14-ngx_http_geoip_module-installation/</link>
-      <pubDate>Tue, 14 Apr 2020 12:18:32 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2020-04-14-ngx_http_geoip_module-installation/</guid>
-      <description>Ngx-http-geoip-module can enable Internet traffic analysis for indivisual conuntry.</description>
-    </item>
-    
-    <item>
-      <title>Install nginx-module-vts for monitoring</title>
-      <link>https://jacklatte.github.io/posts/2020-04-14-nginx-module-vts-installation/</link>
-      <pubDate>Tue, 14 Apr 2020 10:23:09 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2020-04-14-nginx-module-vts-installation/</guid>
-      <description>Nginx-module-vts is designed to monitor Internet traffic on Nginx.</description>
-    </item>
-    
-    <item>
-      <title>How to use async-std</title>
-      <link>https://jacklatte.github.io/posts/2020-04-12-how-to-use-async-std/</link>
-      <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2020-04-12-how-to-use-async-std/</guid>
-      <description>Now, rust has two ways to write async functions, async-std and tokio. Let&amp;rsquo;s first start with async-std.
-Add dependencies in Cargo.toml Note that attributes is used for #[async_std::main].
-Filename: Cargo.toml
-[dependencies] async-std = { version = &amp;#34;1.6.5&amp;#34;, features = [&amp;#34;attributes&amp;#34;] } Write functions Filename: src/hello.rs
-async main requires return a std::io::Result.
-#[async_std::main] async fn main() -&amp;gt; std::io::Result&amp;lt;()&amp;gt; { println!(&amp;#34;hello world!&amp;#34;); Ok(()) } Build your code cargo run </description>
-    </item>
-    
-    <item>
       <title>Write a request limiter in Go</title>
       <link>https://jacklatte.github.io/posts/2021-04-12-go-request-limiter/</link>
       <pubDate>Sun, 12 Apr 2020 14:08:30 +0800</pubDate>
       
       <guid>https://jacklatte.github.io/posts/2021-04-12-go-request-limiter/</guid>
       <description>A middleware which can restrict ip request in certain time window</description>
-    </item>
-    
-    <item>
-      <title>Push hugo to Github Page</title>
-      <link>https://jacklatte.github.io/posts/2020-04-12-hugo-to-github/</link>
-      <pubDate>Sun, 12 Apr 2020 11:39:20 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2020-04-12-hugo-to-github/</guid>
-      <description>We push our hugo website to Github Page.</description>
-    </item>
-    
-    <item>
-      <title>Install Hugo on MacOS</title>
-      <link>https://jacklatte.github.io/posts/2020-04-11-hugo-install/</link>
-      <pubDate>Sat, 11 Apr 2020 11:39:20 +0800</pubDate>
-      
-      <guid>https://jacklatte.github.io/posts/2020-04-11-hugo-install/</guid>
-      <description>&lt;code&gt;Hugo&lt;/code&gt; is the fastest static website generator in the world. It is really suitable for software developers to generate their personal website. In this tutorial, we start to build up a website which used &lt;code&gt;Hugo&lt;/code&gt;.</description>
     </item>
     
   </channel>
