@@ -16,9 +16,7 @@
       <pubDate>Wed, 11 Oct 2023 12:16:46 +0800</pubDate>
       
       <guid>https://jacklatte.github.io/posts/2023-10-11-xv6-lab-trap/</guid>
-      <description>Lab Trap [v] RISC-V assembly (easy) [v] Backtrace (moderate) Alarm (hard) RISC-V assembly (easy) Which registers contain arguments to functions? For example, which register holds 13 in main&amp;rsquo;s call to printf?
-Ans: a1, a2 will store arguments. Here li a2,13 means that load immediate 13 to a2.
-void main(void) { 1c:	1141 add	sp,sp,-16 1e:	e406 sd	ra,8(sp) 20:	e022 sd	s0,0(sp) 22:	0800 add	s0,sp,16 printf(&amp;#34;%d %d\n&amp;#34;, f(8)+1, 13); 24:	4635 li	a2,13 26:	45b1 li	a1,12 //.</description>
+      <description>Implement MIT xv6 lab:trap</description>
     </item>
     
     <item>
@@ -86,9 +84,9 @@ Packages Used gonic/gin: http server bytes: store images encoding/json: process 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jacklatte.github.io/about/</guid>
-      <description>Jack Li B.A. Computer Science / National Tsing Hua University, Taiwan / 2017-2021
-💼 Experiences Software Engineer, LINE, Taiwan, July, 2021 ~ Present Springboot / MySQL / Redis / Kubernetes / Kafka
-Develop Restful API services with SpringBoot, MySQL and Redis. Design unit tests and build automated CI/CD pipeline with JUnit and Jenkins. Build scalable and fault-tolerance system with Docker, Kubernetes and Kafka. ☎️ Contact Email: jack.yenchun.li@gmail.com Github: https://github.com/jacklatte Linkedin: https://www.</description>
+      <description>Jack Li Master of Electrical Engineering / University of British Columbia, Canada / 2023-Present Bachelor of Computer Science / National Tsing Hua University, Taiwan / 2017-2021
+💼 Experiences Software Engineer, LINE, Taiwan, July, 2021.07 ~ 2023.07 Springboot / MySQL / Redis / Kubernetes / Kafka
+Developed the mission API, enabling users to engage in various missions such as check-ins, following users, and completing transactions, leading to a new business for increasing 200M revenue.</description>
     </item>
     
     
