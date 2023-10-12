@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>xv6 on Jacklatte☕</title>
+    <link>https://jacklatte.github.io/tags/xv6/</link>
+    <description>Recent content in xv6 on Jacklatte☕</description>
+    <image>
+      <url>https://jacklatte.github.io/avatar.jpg</url>
+      <link>https://jacklatte.github.io/avatar.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 11 Oct 2023 12:16:46 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/xv6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xv6 lab trap</title>
+      <link>https://jacklatte.github.io/posts/2023-10-11-xv6-lab-trap/</link>
+      <pubDate>Wed, 11 Oct 2023 12:16:46 +0800</pubDate>
+      
+      <guid>https://jacklatte.github.io/posts/2023-10-11-xv6-lab-trap/</guid>
+      <description>Lab Trap [v] RISC-V assembly (easy) [v] Backtrace (moderate) Alarm (hard) RISC-V assembly (easy) Which registers contain arguments to functions? For example, which register holds 13 in main&amp;rsquo;s call to printf?
+Ans: a1, a2 will store arguments. Here li a2,13 means that load immediate 13 to a2.
+void main(void) { 1c:	1141 add	sp,sp,-16 1e:	e406 sd	ra,8(sp) 20:	e022 sd	s0,0(sp) 22:	0800 add	s0,sp,16 printf(&amp;#34;%d %d\n&amp;#34;, f(8)+1, 13); 24:	4635 li	a2,13 26:	45b1 li	a1,12 //.</description>
+    </item>
+    
+  </channel>
+</rss>
