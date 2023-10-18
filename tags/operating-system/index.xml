@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Operating System on Jacklatte☕</title>
-    <link>https://jacklatte.github.io/tags/operating-system/</link>
-    <description>Recent content in Operating System on Jacklatte☕</description>
+    <title>Operating System on jackeryli☕</title>
+    <link>https://jackeryli.github.io/tags/operating-system/</link>
+    <description>Recent content in Operating System on jackeryli☕</description>
     <image>
-      <url>https://jacklatte.github.io/avatar.jpg</url>
-      <link>https://jacklatte.github.io/avatar.jpg</link>
+      <url>https://jackeryli.github.io/avatar.jpg</url>
+      <link>https://jackeryli.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 11 Oct 2023 12:16:46 +0800</lastBuildDate><atom:link href="https://jacklatte.github.io/tags/operating-system/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Oct 2023 12:16:46 +0800</lastBuildDate><atom:link href="https://jackeryli.github.io/tags/operating-system/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xv6 lab trap</title>
-      <link>https://jacklatte.github.io/posts/2023-10-11-xv6-lab-trap/</link>
+      <link>https://jackeryli.github.io/posts/2023-10-11-xv6-lab-trap/</link>
       <pubDate>Wed, 11 Oct 2023 12:16:46 +0800</pubDate>
       
-      <guid>https://jacklatte.github.io/posts/2023-10-11-xv6-lab-trap/</guid>
+      <guid>https://jackeryli.github.io/posts/2023-10-11-xv6-lab-trap/</guid>
       <description>Implement MIT xv6 lab:trap</description>
     </item>
     
