@@ -84,7 +84,7 @@ Packages Used gonic/gin: http server bytes: store images encoding/json: process 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jackeryli.github.io/about/</guid>
-      <description>Jack Li Master of Electrical Engineering / University of British Columbia, Canada / 2023-Present
+      <description>Jack Li 🏫 Education Master of Electrical Engineering / University of British Columbia, Canada / 2023-Present
 Bachelor of Computer Science / National Tsing Hua University, Taiwan / 2017-2021
 💼 Experiences Software Engineer, LINE, Taiwan, July, 2021.07 ~ 2023.07 Springboot / MySQL / Redis / Kubernetes / Kafka
 Developed the mission API, enabling users to engage in various missions such as check-ins, following users, and completing transactions, leading to a new business for increasing 200M revenue.</description>
