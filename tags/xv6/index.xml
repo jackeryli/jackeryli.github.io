@@ -9,7 +9,16 @@
       <link>https://jackeryli.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 11 Oct 2023 12:16:46 +0800</lastBuildDate><atom:link href="https://jackeryli.github.io/tags/xv6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Jan 2024 12:16:46 +0800</lastBuildDate><atom:link href="https://jackeryli.github.io/tags/xv6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implement pwd at xv6</title>
+      <link>https://jackeryli.github.io/posts/2024-01-22-xv6-pwd/</link>
+      <pubDate>Mon, 22 Jan 2024 12:16:46 +0800</pubDate>
+      
+      <guid>https://jackeryli.github.io/posts/2024-01-22-xv6-pwd/</guid>
+      <description>Implement pwd at xv6</description>
+    </item>
+    
     <item>
       <title>xv6 lab trap</title>
       <link>https://jackeryli.github.io/posts/2023-10-11-xv6-lab-trap/</link>

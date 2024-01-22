@@ -9,20 +9,20 @@
       <link>https://jackeryli.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 11 Oct 2023 12:16:46 +0800</lastBuildDate><atom:link href="https://jackeryli.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Jan 2024 12:16:46 +0800</lastBuildDate><atom:link href="https://jackeryli.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Operating System</title>
-      <link>https://jackeryli.github.io/tags/operating-system/</link>
-      <pubDate>Wed, 11 Oct 2023 12:16:46 +0800</pubDate>
+      <title>os</title>
+      <link>https://jackeryli.github.io/tags/os/</link>
+      <pubDate>Mon, 22 Jan 2024 12:16:46 +0800</pubDate>
       
-      <guid>https://jackeryli.github.io/tags/operating-system/</guid>
+      <guid>https://jackeryli.github.io/tags/os/</guid>
       <description></description>
     </item>
     
     <item>
       <title>xv6</title>
       <link>https://jackeryli.github.io/tags/xv6/</link>
-      <pubDate>Wed, 11 Oct 2023 12:16:46 +0800</pubDate>
+      <pubDate>Mon, 22 Jan 2024 12:16:46 +0800</pubDate>
       
       <guid>https://jackeryli.github.io/tags/xv6/</guid>
       <description></description>
