@@ -9,14 +9,23 @@
       <link>https://jackeryli.github.io/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 22 Jan 2024 12:16:46 +0800</lastBuildDate><atom:link href="https://jackeryli.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jan 2024 12:16:46 +0800</lastBuildDate><atom:link href="https://jackeryli.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Implement pwd at xv6</title>
+      <title>Implement xargs on xv6</title>
+      <link>https://jackeryli.github.io/posts/2024-01-23-xv6-xargs/</link>
+      <pubDate>Tue, 23 Jan 2024 12:16:46 +0800</pubDate>
+      
+      <guid>https://jackeryli.github.io/posts/2024-01-23-xv6-xargs/</guid>
+      <description>Implement xargs at xv6</description>
+    </item>
+    
+    <item>
+      <title>Implement pwd on xv6</title>
       <link>https://jackeryli.github.io/posts/2024-01-22-xv6-pwd/</link>
       <pubDate>Mon, 22 Jan 2024 12:16:46 +0800</pubDate>
       
       <guid>https://jackeryli.github.io/posts/2024-01-22-xv6-pwd/</guid>
-      <description>Implement pwd at xv6</description>
+      <description>pwd will print working directory. Here we will implement pwd on xv6.</description>
     </item>
     
     <item>
