@@ -2,22 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jackeryli.github.io/posts/2024-01-23-xv6-xargs/</loc>
-    <lastmod>2024-01-23T12:16:46+08:00</lastmod>
+    <loc>https://jackeryli.github.io/posts/2024-01-23-xv6-isatty/</loc>
+    <lastmod>2024-01-24T12:16:46+08:00</lastmod>
   </url><url>
     <loc>https://jackeryli.github.io/</loc>
-    <lastmod>2024-01-23T12:16:46+08:00</lastmod>
+    <lastmod>2024-01-24T12:16:46+08:00</lastmod>
   </url><url>
     <loc>https://jackeryli.github.io/tags/os/</loc>
-    <lastmod>2024-01-23T12:16:46+08:00</lastmod>
+    <lastmod>2024-01-24T12:16:46+08:00</lastmod>
   </url><url>
     <loc>https://jackeryli.github.io/posts/</loc>
-    <lastmod>2024-01-23T12:16:46+08:00</lastmod>
+    <lastmod>2024-01-24T12:16:46+08:00</lastmod>
   </url><url>
     <loc>https://jackeryli.github.io/tags/</loc>
-    <lastmod>2024-01-23T12:16:46+08:00</lastmod>
+    <lastmod>2024-01-24T12:16:46+08:00</lastmod>
   </url><url>
     <loc>https://jackeryli.github.io/tags/xv6/</loc>
+    <lastmod>2024-01-24T12:16:46+08:00</lastmod>
+  </url><url>
+    <loc>https://jackeryli.github.io/posts/2024-01-23-xv6-xargs/</loc>
     <lastmod>2024-01-23T12:16:46+08:00</lastmod>
   </url><url>
     <loc>https://jackeryli.github.io/posts/2024-01-22-xv6-pwd/</loc>
